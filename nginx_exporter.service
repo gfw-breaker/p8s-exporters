@@ -8,7 +8,7 @@ Group=nginx_exporter
 Type=simple
 ExecStart=/usr/local/bin/nginx_exporter \
 	-web.listen-address=0.0.0.0:9113 \
-	-nginx.scrape-uri http://127.0.0.1:80/nginx_status
+	-nginx.scrape-uri http://127.0.0.1:8888/nginx_status
 
 [Install]
 WantedBy=multi-user.target
