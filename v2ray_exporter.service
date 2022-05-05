@@ -1,0 +1,14 @@
+[Unit]
+Description=V2Ray Exporter
+After=network.target
+
+[Service]
+User=v2ray_exporter
+Group=v2ray_exporter
+Type=simple
+ExecStart=/usr/local/bin/v2ray_exporter \
+	--v2ray-endpoint "127.0.0.1:10085"
+
+[Install]
+WantedBy=multi-user.target
+
