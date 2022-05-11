@@ -1,6 +1,6 @@
 [Unit]
 Description=Nginx Exporter
-After=network.target
+After=network.target nginx.service
 
 [Service]
 User=nginx_exporter
