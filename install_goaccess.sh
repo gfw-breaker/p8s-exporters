@@ -20,9 +20,10 @@ make install
 
 cd ..
 mkdir -p /usr/share/nginx/html/goaccess
-
+cp binary/GeoLiteCity.dat /etc/nginx
 cp goaccess.conf /usr/local/etc/goaccess/
 cp goaccess.service /etc/systemd/system/
+
 systemctl enable goaccess --now
 
 
