@@ -18,7 +18,7 @@ cd goaccess-*
 make
 make install
 
-
+cd ..
 mkdir -p /usr/share/nginx/html/goaccess
 
 cp goaccess.conf /usr/local/etc/goaccess/
