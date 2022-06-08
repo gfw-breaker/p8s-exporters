@@ -4,9 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=goaccess -a -d -f /var/log/nginx/access.log -p /etc/goaccess/goaccess.conf 	\
-	--real-time-html -o /usr/share/nginx/html/goaccess/index.html	\
-	--ignore-crawlers --daemonize
+ExecStart=goaccess -f /usr/local/etc/goaccess/goaccess.conf
 
 [Install]
 WantedBy=multi-user.target
