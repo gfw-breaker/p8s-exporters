@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=goaccess -p /usr/local/etc/goaccess/goaccess.conf
+ExecStart=/usr/local/bin/goaccess -p /usr/local/etc/goaccess/goaccess.conf
 
 [Install]
 WantedBy=multi-user.target
