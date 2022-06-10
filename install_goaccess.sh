@@ -20,10 +20,25 @@ make install
 
 cd ..
 mkdir -p /usr/share/nginx/html/goaccess
-cp binary/GeoLiteCity.dat /etc/nginx
+cp binary/GeoLiteCity.dat /usr/share/GeoIP/GeoLiteCity.dat
 cp goaccess.conf /usr/local/etc/goaccess/
 cp goaccess.service /etc/systemd/system/
 
 systemctl enable goaccess --now
+
+crontab -l | grep goaccess
+if [ $? -eq 0 ]; then
+	exit
+fi
+
+cat >>  /var/spool/cron/root  << EOF
+*/5 * * * * systemctl restart goaccess
+EOF
+
+
+# GeoIP
+# https://www.miyuru.lk/geoiplegacy
+
+
 
 
