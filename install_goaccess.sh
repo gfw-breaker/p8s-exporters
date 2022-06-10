@@ -2,7 +2,7 @@
 
 version=1.6
 
-yum -y install GeoIP-devel ncurses-devel openssl-devel 
+yum -y install gcc GeoIP-devel ncurses-devel openssl-devel 
 
 wget --no-check-certificate https://tar.goaccess.io/goaccess-${version}.tar.gz
 tar -xzvf goaccess*.gz && rm *.gz
